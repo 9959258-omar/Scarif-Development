@@ -173,3 +173,11 @@ try {
 <?php
 ob_end_flush();
 ?>
+<?php
+require_once 'auth.php';
+
+// Pass an array of all roles allowed to view this page
+authorise(['admin', 'staff']);
+?>
+
+// Page code continues below...
